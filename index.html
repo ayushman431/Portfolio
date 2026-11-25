@@ -1,0 +1,1943 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurevia Institute of Technology</title>
+
+<style>
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #333;
+}
+
+html {
+    scroll-padding-top: 20px;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    color: #092b50;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: #092b50;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 25px;
+}
+
+.logo span {
+    color: #55c4ff;
+}
+
+.logo p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #55c4ff;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 440px;
+    background: linear-gradient(120deg, #092b50, #1267a5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 10%;
+}
+
+.hero h2 {
+    font-size: 45px;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    background: #19a5e5;
+    color: white;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: #0879b5;
+}
+
+/* STATISTICS */
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    background: white;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+.stat h2 {
+    color: #087fbd;
+    font-size: 30px;
+}
+
+.stat p {
+    color: #666;
+    margin-top: 8px;
+}
+
+/* ABOUT */
+
+.about {
+    line-height: 1.8;
+    text-align: center;
+    max-width: 950px;
+    margin: auto;
+}
+
+/* COURSES */
+
+.course-section {
+    background: #eaf3fb;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+}
+
+.course-card h3 {
+    color: #1267a5;
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.course-card button {
+    background: #092b50;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 5px;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+.course-card button:hover {
+    background: #1267a5;
+}
+
+/* FACILITIES */
+
+.facility-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.facility {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.facility h3 {
+    color: #1267a5;
+    margin-bottom: 12px;
+}
+
+/* ADMISSION */
+
+.admission {
+    background: #eaf3fb;
+}
+
+.admission-box {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ccc;
+}
+
+.admission-box h3 {
+    color: #092b50;
+    margin-bottom: 15px;
+}
+
+.admission-box label {
+    font-weight: bold;
+    color: #333;
+}
+
+.admission-box input[type="text"],
+.admission-box input[type="tel"],
+.admission-box input[type="email"],
+.admission-box select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.admission-box input[type="radio"] {
+    margin: 15px 5px 15px 15px;
+    cursor: pointer;
+}
+
+.fee-box {
+    background: #eaf3fb;
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 2;
+    margin-top: 15px;
+    display: none;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+#successMessage {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #e2f8e8;
+    border-radius: 8px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+#successMessage h3 {
+    color: green;
+}
+
+/* COURSE POPUP */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    overflow-y: auto;
+    padding: 30px 15px;
+}
+
+.modal-content {
+    background: white;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.8;
+}
+
+.modal-content h2 {
+    color: #1267a5;
+    margin-bottom: 15px;
+    padding-right: 25px;
+}
+
+.modal-content h3 {
+    margin-top: 18px;
+    color: #092b50;
+}
+
+.modal-content ul {
+    padding-left: 25px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* PORTALS */
+
+.portal-section {
+    background: #eaf3fb;
+}
+
+.portal-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.portal-card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.portal-card h3 {
+    color: #1267a5;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.portal-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.portal-card button {
+    background: #092b50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.portal-card button:hover {
+    background: #1267a5;
+}
+
+/* PORTAL LOGIN */
+
+.portal-modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    overflow-y: auto;
+    padding: 30px 15px;
+}
+
+.portal-login-box {
+    background: white;
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 35px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.portal-login-box h2 {
+    color: #092b50;
+    margin-bottom: 10px;
+}
+
+.portal-login-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.portal-login-box input {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.portal-login-box button {
+    width: 100%;
+}
+
+.portal-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.portal-error {
+    color: red !important;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* DASHBOARDS */
+
+.dashboard {
+    display: none;
+    min-height: 500px;
+    background: #f5f7fb;
+    padding: 40px 8%;
+}
+
+.dashboard-header {
+    background: #092b50;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.dashboard-header h2 {
+    margin-bottom: 10px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.dashboard-card h3 {
+    color: #1267a5;
+    margin-bottom: 12px;
+}
+
+.dashboard-card p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.dashboard-card ul {
+    padding-left: 20px;
+    line-height: 2;
+}
+
+.dashboard button {
+    background: #1267a5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.dashboard button:hover {
+    background: #092b50;
+}
+
+.logout-btn {
+    background: #d93636 !important;
+    float: right;
+}
+
+.logout-btn:hover {
+    background: #a91f1f !important;
+}
+
+.dashboard-notice {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eaf3fb;
+    border-radius: 8px;
+    display: none;
+}
+
+/* CONTACT AND FOOTER */
+
+.contact {
+    background: white;
+}
+
+.contact-details {
+    text-align: center;
+    line-height: 2;
+}
+
+footer {
+    background: #092b50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .modal-content {
+        padding: 25px;
+    }
+
+    .portal-login-box {
+        margin: 25px auto;
+    }
+
+    .logout-btn {
+        float: none;
+        margin-bottom: 15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        <h1>AUREVIA <span>INSTITUTE</span></h1>
+        <p>OF TECHNOLOGY & MANAGEMENT</p>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#new-admission">Admissions</a>
+        <a href="#student-portal">Student Portal</a>
+        <a href="#faculty-portal">Faculty Portal</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<div class="hero" id="home">
+
+    <h2>Shape Your Future With Quality Education</h2>
+
+    <p>
+        Welcome to Aurevia Institute of Technology.
+        Discover your potential, develop your skills
+        and prepare yourself for a successful future.
+    </p>
+
+    <a href="#courses" class="btn">
+        Explore Courses
+    </a>
+
+</div>
+
+
+<!-- STATISTICS -->
+
+<div class="stats">
+
+    <div class="stat">
+        <h2>5000+</h2>
+        <p>Students</p>
+    </div>
+
+    <div class="stat">
+        <h2>200+</h2>
+        <p>Faculty Members</p>
+    </div>
+
+    <div class="stat">
+        <h2>25+</h2>
+        <p>Courses</p>
+    </div>
+
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Campus Facilities</p>
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About Our Institution</h2>
+
+    <p class="section-description">
+        Learn more about Aurevia Institute of Technology
+    </p>
+
+    <div class="about">
+
+        <p>
+            Aurevia Institute of Technology and Management
+            is an educational institution focused on academic
+            excellence, innovation and professional development.
+
+            We provide students with a supportive learning
+            environment, experienced faculty and modern facilities.
+
+            Our goal is to develop skilled professionals and
+            responsible citizens who can contribute to society.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section id="courses" class="course-section">
+
+    <h2 class="section-title">Our Academic Programs</h2>
+
+    <p class="section-description">
+        Explore our undergraduate and postgraduate programs.
+        Click on a course to view its details and annual fees.
+    </p>
+
+    <div class="course-container">
+
+        <div class="course-card">
+            <h3>B.Tech - Computer Science</h3>
+            <p>Learn programming, software development,
+            artificial intelligence and computer systems.</p>
+            <button onclick="showCourse('cse')">View Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>B.Tech - Electronics</h3>
+            <p>Explore electronics, communication systems,
+            circuits and embedded technology.</p>
+            <button onclick="showCourse('ece')">View Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>BCA</h3>
+            <p>Develop skills in computer applications,
+            databases, programming and web development.</p>
+            <button onclick="showCourse('bca')">View Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>BBA</h3>
+            <p>Study business management, marketing,
+            finance and entrepreneurship.</p>
+            <button onclick="showCourse('bba')">View Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>MCA</h3>
+            <p>Advance your knowledge in software engineering,
+            databases and computer applications.</p>
+            <button onclick="showCourse('mca')">View Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>MBA</h3>
+            <p>Build leadership, management,
+            business and decision-making skills.</p>
+            <button onclick="showCourse('mba')">View Course</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COURSE POPUP -->
+
+<div class="modal" id="courseModal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeCourse()">&times;</span>
+
+        <div id="courseDetails"></div>
+
+    </div>
+
+</div>
+
+
+<!-- FACILITIES -->
+
+<section id="facilities">
+
+    <h2 class="section-title">Campus Facilities</h2>
+
+    <p class="section-description">
+        Providing students with everything they need to succeed.
+    </p>
+
+    <div class="facility-container">
+
+        <div class="facility">
+            <h3>Library</h3>
+            <p>A well-equipped library with books,
+            journals and digital resources.</p>
+        </div>
+
+        <div class="facility">
+            <h3>Computer Labs</h3>
+            <p>Modern computer laboratories
+            for practical learning.</p>
+        </div>
+
+        <div class="facility">
+            <h3>Sports</h3>
+            <p>Indoor and outdoor sports
+            facilities for students.</p>
+        </div>
+
+        <div class="facility">
+            <h3>Hostel</h3>
+            <p>Comfortable accommodation
+            for students.</p>
+        </div>
+
+        <div class="facility">
+            <h3>Cafeteria</h3>
+            <p>Clean and comfortable
+            dining facilities.</p>
+        </div>
+
+        <div class="facility">
+            <h3>Wi-Fi Campus</h3>
+            <p>Internet connectivity
+            across the campus.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ADMISSIONS -->
+
+<section id="new-admission" class="admission">
+
+    <h2 class="section-title">New Admissions 2026-27</h2>
+
+    <p class="section-description">
+        Apply to Aurevia Institute of Technology.
+        Fill in your details and select your preferred services.
+    </p>
+
+    <div class="admission-box">
+
+        <form id="admissionForm">
+
+            <h3>Personal Details</h3>
+
+            <label for="studentName">Full Name</label>
+            <input type="text" id="studentName"
+            placeholder="Enter your full name" required>
+
+            <br><br>
+
+            <label for="studentPhone">Mobile Number</label>
+            <input type="tel" id="studentPhone"
+            placeholder="Enter 10-digit mobile number"
+            pattern="[0-9]{10}" maxlength="10" required>
+
+            <br><br>
+
+            <label for="studentEmail">Email Address</label>
+            <input type="email" id="studentEmail"
+            placeholder="Enter your email" required>
+
+            <hr>
+
+            <h3>Course Selection</h3>
+
+            <label for="selectedCourse">Select Your Course</label>
+
+            <select id="selectedCourse" required onchange="updateFees()">
+
+                <option value="">-- Select Course --</option>
+                <option value="cse">B.Tech - Computer Science</option>
+                <option value="ece">B.Tech - Electronics</option>
+                <option value="bca">BCA</option>
+                <option value="bba">BBA</option>
+                <option value="mca">MCA</option>
+                <option value="mba">MBA</option>
+
+            </select>
+
+            <div class="fee-box" id="feeDetails">
+
+                <h3>Course Details</h3>
+
+                <p>Course: <span id="courseName"></span></p>
+                <p>Duration: <span id="courseDuration"></span></p>
+                <p>Annual Tuition Fee: ₹<span id="tuitionFee"></span></p>
+
+            </div>
+
+            <hr>
+
+            <h3>Additional Facilities</h3>
+
+            <br>
+
+            <label>Do you require Hostel Accommodation?</label>
+
+            <br>
+
+            <input type="radio" name="hostel" value="Yes"
+            onchange="updateFees()" required> Yes
+
+            <input type="radio" name="hostel" value="No"
+            onchange="updateFees()"> No
+
+            <br><br>
+
+            <label>Do you require College Bus Service?</label>
+
+            <br>
+
+            <input type="radio" name="bus" value="Yes"
+            onchange="updateFees()" required> Yes
+
+            <input type="radio" name="bus" value="No"
+            onchange="updateFees()"> No
+
+            <div class="fee-box" id="totalFees">
+
+                <h3>Annual Fee Summary</h3>
+
+                <p>Tuition Fee: ₹<span id="baseAmount">0</span></p>
+                <p>Hostel Fee: ₹<span id="hostelAmount">0</span></p>
+                <p>Bus Fee: ₹<span id="busAmount">0</span></p>
+
+                <hr>
+
+                <h3>Total Annual Fee: ₹<span id="finalAmount">0</span></h3>
+
+            </div>
+
+            <button type="submit" class="btn submit-btn">
+                Submit Admission Enquiry
+            </button>
+
+        </form>
+
+        <div id="successMessage">
+
+            <h3>Admission Enquiry Submitted!</h3>
+
+            <p id="applicationSummary"></p>
+
+            <p>Thank you for your interest in
+            Aurevia Institute of Technology.</p>
+
+            <button class="btn" onclick="resetAdmission()">
+                New Enquiry
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STUDENT AND FACULTY PORTALS -->
+
+<section class="portal-section" id="student-portal">
+
+    <h2 class="section-title">Academic Portals</h2>
+
+    <p class="section-description">
+        Access your academic information through our dedicated portals.
+    </p>
+
+    <div class="portal-container">
+
+        <div class="portal-card">
+
+            <h3>Student Portal</h3>
+
+            <p>
+                Access your student profile, attendance,
+                assignments, examination results,
+                subjects and fee information.
+            </p>
+
+            <button onclick="openPortal('student')">
+                Student Login
+            </button>
+
+        </div>
+
+        <div class="portal-card" id="faculty-portal">
+
+            <h3>Faculty Portal</h3>
+
+            <p>
+                Access your faculty profile, assigned subjects,
+                student information, attendance management
+                and assignment management.
+            </p>
+
+            <button onclick="openPortal('faculty')">
+                Faculty Login
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTAL LOGIN MODAL -->
+
+<div class="portal-modal" id="portalModal">
+
+    <div class="portal-login-box">
+
+        <span class="portal-close" onclick="closePortal()">&times;</span>
+
+        <h2 id="portalTitle">Portal Login</h2>
+
+        <p id="portalDescription">
+            Enter your login credentials.
+        </p>
+
+        <form id="portalLoginForm">
+
+            <input type="text" id="portalUsername"
+            placeholder="Enter User ID" required>
+
+            <input type="password" id="portalPassword"
+            placeholder="Enter Password" required>
+
+            <button type="submit" class="btn">
+                Login
+            </button>
+
+            <p class="portal-error" id="portalError"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- STUDENT DASHBOARD -->
+
+<section class="dashboard" id="studentDashboard">
+
+    <div class="dashboard-header">
+
+        <button class="logout-btn" onclick="logoutPortal()">
+            Logout
+        </button>
+
+        <h2>Welcome, Rahul Sharma!</h2>
+
+        <p>Student Dashboard | Aurevia Institute of Technology</p>
+
+        <p>Student ID: AIT2026001</p>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+            <h3>Student Profile</h3>
+
+            <p>Name: Rahul Sharma</p>
+            <p>Course: B.Tech CSE</p>
+            <p>Semester: 3rd Semester</p>
+            <p>Academic Year: 2026-27</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Attendance</h3>
+
+            <p>Overall Attendance: 87%</p>
+            <p>Classes Attended: 87</p>
+            <p>Total Classes: 100</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Examination Results</h3>
+
+            <p>Previous Semester: Passed</p>
+            <p>SGPA: 8.6</p>
+            <p>Result Status: Completed</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Fee Details</h3>
+
+            <p>Annual Tuition Fee: ₹1,50,000</p>
+            <p>Paid Amount: ₹1,50,000</p>
+            <p>Pending Amount: ₹0</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>My Subjects</h3>
+
+            <ul>
+                <li>Data Structures</li>
+                <li>Database Management Systems</li>
+                <li>Operating Systems</li>
+                <li>Computer Networks</li>
+                <li>Object Oriented Programming</li>
+            </ul>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Assignments</h3>
+
+            <ul>
+                <li>DBMS Assignment - Submitted</li>
+                <li>Data Structures - Pending</li>
+                <li>OOP Assignment - Submitted</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FACULTY DASHBOARD -->
+
+<section class="dashboard" id="facultyDashboard">
+
+    <div class="dashboard-header">
+
+        <button class="logout-btn" onclick="logoutPortal()">
+            Logout
+        </button>
+
+        <h2>Welcome, Dr. Priya Mehta!</h2>
+
+        <p>Faculty Dashboard | Aurevia Institute of Technology</p>
+
+        <p>Faculty ID: AITFAC001</p>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+            <h3>Faculty Profile</h3>
+
+            <p>Name: Dr. Priya Mehta</p>
+            <p>Department: Computer Science</p>
+            <p>Designation: Associate Professor</p>
+            <p>Experience: 8 Years</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Assigned Subjects</h3>
+
+            <ul>
+                <li>Database Management Systems</li>
+                <li>Data Structures</li>
+                <li>Computer Networks</li>
+            </ul>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Class Information</h3>
+
+            <p>Class: B.Tech CSE</p>
+            <p>Semester: 3rd Semester</p>
+            <p>Total Students: 60</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Today's Schedule</h3>
+
+            <p>9:00 AM - Data Structures</p>
+            <p>11:00 AM - DBMS</p>
+            <p>2:00 PM - Computer Networks</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Attendance Management</h3>
+
+            <p>Manage student attendance records.</p>
+
+            <button onclick="showPortalMessage('Attendance management')">
+                Manage Attendance
+            </button>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Assignment Management</h3>
+
+            <p>Create assignments and manage submissions.</p>
+
+            <button onclick="showPortalMessage('Assignment management')">
+                Manage Assignments
+            </button>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Student Records</h3>
+
+            <p>View academic information of enrolled students.</p>
+
+            <button onclick="showPortalMessage('Student records')">
+                View Students
+            </button>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Announcements</h3>
+
+            <p>Share important academic announcements.</p>
+
+            <button onclick="showPortalMessage('Announcements')">
+                Create Announcement
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="dashboard-notice" id="facultyNotice"></div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-details">
+
+        <p><b>Address:</b> Bengaluru, Karnataka, India</p>
+        <p><b>Email:</b> info@aurevia.edu</p>
+        <p><b>Phone:</b> +91 9876543210</p>
+        <p><b>Office Hours:</b> Monday - Saturday, 9 AM - 5 PM</p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        &copy; 2026 Aurevia Institute of Technology.
+        All Rights Reserved.
+    </p>
+
+    <p>Designed for Excellence | Powered by Education</p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// COURSE DATABASE
+
+const courses = {
+
+    cse: {
+        title: "B.Tech - Computer Science and Engineering",
+        duration: "4 Years",
+        fee: 150000,
+
+        eligibility:
+        "10+2 with Physics and Mathematics, subject to applicable admission requirements.",
+
+        description:
+        "This program focuses on computer programming, software development, artificial intelligence and modern computing technologies.",
+
+        subjects: [
+            "C Programming",
+            "Data Structures",
+            "Database Management Systems",
+            "Operating Systems",
+            "Computer Networks",
+            "Artificial Intelligence"
+        ],
+
+        careers: [
+            "Software Developer",
+            "Web Developer",
+            "Data Analyst",
+            "AI Engineer",
+            "Cybersecurity Analyst"
+        ]
+    },
+
+    ece: {
+        title: "B.Tech - Electronics and Communication Engineering",
+        duration: "4 Years",
+        fee: 140000,
+
+        eligibility:
+        "10+2 with Physics and Mathematics, subject to applicable admission requirements.",
+
+        description:
+        "This program teaches electronic circuits, communication systems, embedded systems and modern electronic technologies.",
+
+        subjects: [
+            "Electronic Devices",
+            "Digital Electronics",
+            "Signal Processing",
+            "Microprocessors",
+            "Communication Systems"
+        ],
+
+        careers: [
+            "Electronics Engineer",
+            "Embedded Systems Engineer",
+            "Telecom Engineer",
+            "Hardware Engineer"
+        ]
+    },
+
+    bca: {
+        title: "Bachelor of Computer Applications (BCA)",
+        duration: "3 Years",
+        fee: 80000,
+
+        eligibility:
+        "10+2 or equivalent qualification, subject to university admission rules.",
+
+        description:
+        "BCA develops practical skills in computer applications, programming, database systems and web technologies.",
+
+        subjects: [
+            "C Programming",
+            "Python",
+            "Java",
+            "Web Development",
+            "Database Management",
+            "Computer Networks"
+        ],
+
+        careers: [
+            "Web Developer",
+            "Software Developer",
+            "System Administrator",
+            "IT Support Specialist"
+        ]
+    },
+
+    bba: {
+        title: "Bachelor of Business Administration (BBA)",
+        duration: "3 Years",
+        fee: 90000,
+
+        eligibility:
+        "10+2 or equivalent qualification, subject to university admission rules.",
+
+        description:
+        "BBA provides knowledge of business operations, management, marketing, finance and entrepreneurship.",
+
+        subjects: [
+            "Principles of Management",
+            "Marketing",
+            "Business Economics",
+            "Financial Accounting",
+            "Human Resources"
+        ],
+
+        careers: [
+            "Business Analyst",
+            "Marketing Executive",
+            "HR Executive",
+            "Business Consultant"
+        ]
+    },
+
+    mca: {
+        title: "Master of Computer Applications (MCA)",
+        duration: "2 Years",
+        fee: 110000,
+
+        eligibility:
+        "A relevant bachelor's degree with applicable mathematics and admission requirements.",
+
+        description:
+        "MCA is an advanced program covering software engineering, application development and modern computing.",
+
+        subjects: [
+            "Advanced Java",
+            "Software Engineering",
+            "Cloud Computing",
+            "Machine Learning",
+            "Advanced Databases"
+        ],
+
+        careers: [
+            "Software Engineer",
+            "Application Developer",
+            "Cloud Engineer",
+            "System Analyst"
+        ]
+    },
+
+    mba: {
+        title: "Master of Business Administration (MBA)",
+        duration: "2 Years",
+        fee: 180000,
+
+        eligibility:
+        "A bachelor's degree from a recognized university, subject to admission requirements.",
+
+        description:
+        "MBA develops leadership, strategic planning, business management and decision-making abilities.",
+
+        subjects: [
+            "Business Strategy",
+            "Marketing Management",
+            "Financial Management",
+            "Human Resources",
+            "Operations Management"
+        ],
+
+        careers: [
+            "Business Manager",
+            "Financial Analyst",
+            "Marketing Manager",
+            "HR Manager",
+            "Consultant"
+        ]
+    }
+
+};
+
+
+// FORMAT CURRENCY
+
+function formatMoney(amount) {
+    return amount.toLocaleString("en-IN");
+}
+
+
+// SHOW COURSE DETAILS
+
+function showCourse(courseId) {
+
+    const course = courses[courseId];
+
+    const subjects = course.subjects
+        .map(subject => `<li>${subject}</li>`).join("");
+
+    const careers = course.careers
+        .map(career => `<li>${career}</li>`).join("");
+
+    document.getElementById("courseDetails").innerHTML = `
+
+        <h2>${course.title}</h2>
+
+        <p><b>Duration:</b> ${course.duration}</p>
+
+        <p><b>Annual Tuition Fee:</b>
+        ₹${formatMoney(course.fee)}</p>
+
+        <h3>Course Description</h3>
+        <p>${course.description}</p>
+
+        <h3>Eligibility</h3>
+        <p>${course.eligibility}</p>
+
+        <h3>Subjects Covered</h3>
+        <ul>${subjects}</ul>
+
+        <h3>Career Opportunities</h3>
+        <ul>${careers}</ul>
+
+        <button class="btn" onclick="closeCourse()">
+            Close Details
+        </button>
+
+        <button class="btn" onclick="applyForCourse('${courseId}')">
+            Apply for this Course
+        </button>
+
+    `;
+
+    document.getElementById("courseModal").style.display = "block";
+
+}
+
+
+// CLOSE COURSE POPUP
+
+function closeCourse() {
+
+    document.getElementById("courseModal").style.display = "none";
+
+}
+
+
+// APPLY FOR COURSE
+
+function applyForCourse(courseId) {
+
+    closeCourse();
+
+    document.getElementById("selectedCourse").value = courseId;
+
+    updateFees();
+
+    document.getElementById("new-admission")
+        .scrollIntoView({ behavior: "smooth" });
+
+}
+
+
+// CLOSE COURSE MODAL ON OUTSIDE CLICK
+
+window.addEventListener("click", function(event) {
+
+    const modal = document.getElementById("courseModal");
+
+    if (event.target === modal) {
+        closeCourse();
+    }
+
+});
+
+
+// HOSTEL AND BUS FEES
+
+const hostelFee = 60000;
+const busFee = 24000;
+
+
+// UPDATE ADMISSION FEES
+
+function updateFees() {
+
+    const courseId =
+        document.getElementById("selectedCourse").value;
+
+    const feeDetails =
+        document.getElementById("feeDetails");
+
+    const totalFees =
+        document.getElementById("totalFees");
+
+    if (!courseId) {
+
+        feeDetails.style.display = "none";
+        totalFees.style.display = "none";
+
+        return;
+    }
+
+    const course = courses[courseId];
+
+    document.getElementById("courseName").textContent =
+        course.title;
+
+    document.getElementById("courseDuration").textContent =
+        course.duration;
+
+    document.getElementById("tuitionFee").textContent =
+        formatMoney(course.fee);
+
+    feeDetails.style.display = "block";
+
+
+    const hostel = document.querySelector(
+        'input[name="hostel"]:checked'
+    );
+
+    const bus = document.querySelector(
+        'input[name="bus"]:checked'
+    );
+
+    const hostelAmount =
+        hostel && hostel.value === "Yes" ? hostelFee : 0;
+
+    const busAmount =
+        bus && bus.value === "Yes" ? busFee : 0;
+
+    const total =
+        course.fee + hostelAmount + busAmount;
+
+
+    document.getElementById("baseAmount").textContent =
+        formatMoney(course.fee);
+
+    document.getElementById("hostelAmount").textContent =
+        formatMoney(hostelAmount);
+
+    document.getElementById("busAmount").textContent =
+        formatMoney(busAmount);
+
+    document.getElementById("finalAmount").textContent =
+        formatMoney(total);
+
+    if (hostel && bus) {
+        totalFees.style.display = "block";
+    } else {
+        totalFees.style.display = "none";
+    }
+
+}
+
+
+// ESCAPE USER INPUT
+
+function escapeHTML(value) {
+
+    return value.replace(/[&<>"']/g, function(character) {
+
+        const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+        };
+
+        return entities[character];
+
+    });
+
+}
+
+
+// SUBMIT ADMISSION FORM
+
+document.getElementById("admissionForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("studentName").value.trim();
+
+    const phone =
+        document.getElementById("studentPhone").value.trim();
+
+    const email =
+        document.getElementById("studentEmail").value.trim();
+
+    const courseId =
+        document.getElementById("selectedCourse").value;
+
+    const hostel = document.querySelector(
+        'input[name="hostel"]:checked'
+    ).value;
+
+    const bus = document.querySelector(
+        'input[name="bus"]:checked'
+    ).value;
+
+    const course = courses[courseId];
+
+    const total =
+        course.fee +
+        (hostel === "Yes" ? hostelFee : 0) +
+        (bus === "Yes" ? busFee : 0);
+
+
+    document.getElementById("applicationSummary").innerHTML = `
+
+        <b>Student Name:</b> ${escapeHTML(name)}<br>
+
+        <b>Mobile Number:</b> ${escapeHTML(phone)}<br>
+
+        <b>Email:</b> ${escapeHTML(email)}<br>
+
+        <b>Selected Course:</b> ${course.title}<br>
+
+        <b>Course Duration:</b> ${course.duration}<br>
+
+        <b>Hostel Required:</b> ${hostel}<br>
+
+        <b>Bus Service Required:</b> ${bus}<br>
+
+        <b>Annual Tuition Fee:</b>
+        ₹${formatMoney(course.fee)}<br>
+
+        <b>Hostel Fee:</b>
+        ₹${formatMoney(hostel === "Yes" ? hostelFee : 0)}<br>
+
+        <b>Bus Fee:</b>
+        ₹${formatMoney(bus === "Yes" ? busFee : 0)}<br>
+
+        <hr>
+
+        <b>Total Annual Fee:</b>
+        ₹${formatMoney(total)}
+
+    `;
+
+
+    document.getElementById("successMessage").style.display = "block";
+
+    document.getElementById("admissionForm").style.display = "none";
+
+    document.getElementById("successMessage")
+        .scrollIntoView({ behavior: "smooth" });
+
+});
+
+
+// RESET ADMISSION FORM
+
+function resetAdmission() {
+
+    document.getElementById("admissionForm").reset();
+
+    document.getElementById("admissionForm").style.display = "block";
+
+    document.getElementById("successMessage").style.display = "none";
+
+    document.getElementById("feeDetails").style.display = "none";
+
+    document.getElementById("totalFees").style.display = "none";
+
+}
+
+
+// ========================================
+// STUDENT AND FACULTY PORTAL FUNCTIONALITY
+// ========================================
+
+
+// DEMO LOGIN CREDENTIALS
+
+const portalUsers = {
+
+    student: {
+        username: "student001",
+        password: "student123"
+    },
+
+    faculty: {
+        username: "faculty001",
+        password: "faculty123"
+    }
+
+};
+
+
+let currentPortal = "";
+
+
+// OPEN PORTAL LOGIN
+
+function openPortal(type) {
+
+    currentPortal = type;
+
+    document.getElementById("portalModal").style.display = "block";
+
+    document.getElementById("portalLoginForm").reset();
+
+    document.getElementById("portalError").textContent = "";
+
+    if (type === "student") {
+
+        document.getElementById("portalTitle").textContent =
+            "Student Portal Login";
+
+        document.getElementById("portalDescription").textContent =
+            "Login using your student credentials.";
+
+        document.getElementById("portalUsername").placeholder =
+            "Student ID";
+
+    }
+
+    else {
+
+        document.getElementById("portalTitle").textContent =
+            "Faculty Portal Login";
+
+        document.getElementById("portalDescription").textContent =
+            "Login using your faculty credentials.";
+
+        document.getElementById("portalUsername").placeholder =
+            "Faculty ID";
+
+    }
+
+}
+
+
+// CLOSE LOGIN MODAL
+
+function closePortal() {
+
+    document.getElementById("portalModal").style.display = "none";
+
+}
+
+
+// VERIFY LOGIN
+
+document.getElementById("portalLoginForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const username =
+        document.getElementById("portalUsername").value.trim();
+
+    const password =
+        document.getElementById("portalPassword").value;
+
+    const user = portalUsers[currentPortal];
+
+
+    if (
+        user &&
+        username === user.username &&
+        password === user.password
+    ) {
+
+        closePortal();
+
+        document.getElementById("studentDashboard").style.display =
+            "none";
+
+        document.getElementById("facultyDashboard").style.display =
+            "none";
+
+
+        if (currentPortal === "student") {
+
+            document.getElementById("studentDashboard").style.display =
+                "block";
+
+            document.getElementById("studentDashboard")
+                .scrollIntoView({ behavior: "smooth" });
+
+        }
+
+        else {
+
+            document.getElementById("facultyDashboard").style.display =
+                "block";
+
+            document.getElementById("facultyDashboard")
+                .scrollIntoView({ behavior: "smooth" });
+
+        }
+
+    }
+
+    else {
+
+        document.getElementById("portalError").textContent =
+            "Invalid User ID or Password. Please try again.";
+
+    }
+
+});
+
+
+// LOGOUT
+
+function logoutPortal() {
+
+    document.getElementById("studentDashboard").style.display =
+        "none";
+
+    document.getElementById("facultyDashboard").style.display =
+        "none";
+
+    document.getElementById("portalLoginForm").reset();
+
+    document.getElementById("portalError").textContent = "";
+
+    document.getElementById("home")
+        .scrollIntoView({ behavior: "smooth" });
+
+}
+
+
+// FACULTY DASHBOARD DEMO ACTIONS
+
+function showPortalMessage(feature) {
+
+    const notice = document.getElementById("facultyNotice");
+
+    notice.textContent =
+        feature + " will be available after connecting the backend database.";
+
+    notice.style.display = "block";
+
+}
+
+
+// CLOSE LOGIN BY CLICKING OUTSIDE
+
+document.getElementById("portalModal")
+.addEventListener("click", function(event) {
+
+    if (event.target === this) {
+        closePortal();
+    }
+
+});
+
+
+// CLOSE MODALS USING ESCAPE KEY
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeCourse();
+        closePortal();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
